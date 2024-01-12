@@ -65,9 +65,9 @@ export function onclick(root, fn) {
 }
 
 export function setSelected(path, className='selected') {
-  const el = $(`[href="${path}"]`)
+  const els = $$(`[href="${path}"]`)
   $$('.' + className).forEach(el => el.classList.remove(className))
-  el?.classList.add(className)
+  els.forEach((el) => el.classList.add(className));
 }
 
 

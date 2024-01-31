@@ -325,6 +325,7 @@ export default function createApp(component, data={}, deps=[], $parent={}) {
 
       } else {
         self[key] = val
+        self.update()
       }
       return true
     }

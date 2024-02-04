@@ -258,9 +258,9 @@ export default function createApp(component, data={}, deps=[], $parent={}) {
         impl.update = update
       }
 
-      walk(root)
-
       wrap.replaceWith(root)
+      
+      walk(root)
 
       // copy root attributes
       for (const a of [...wrap.attributes]) setAttr(root, a.name, a.value)
